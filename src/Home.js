@@ -11,7 +11,7 @@ class Home extends Component {
 
         <p>Please select a color.</p>
         <ul>
-          {this.props.colors.map(color => <li><Link to=`/colors/${color.name}`>{color.name}</Link></li>)}
+          {this.props.colors.map(color => <li><Link to={`/colors/${color.name}`}>{color.name}</Link></li>)}
         </ul>
       </div>
     );

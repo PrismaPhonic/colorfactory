@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Routes from './Routes';
+import { Route } from 'react-router-dom';
+import Home from './Home';
 import './Routes.css';
 
 class Routes extends Component {
@@ -12,9 +13,9 @@ class Routes extends Component {
       {
         color: 'green',
         code: '#0FFF00'
-      }
+      },
       {
-        color: 're',
+        color: 'red',
         code: '#FF0000'
       }
     ]
@@ -23,7 +24,7 @@ class Routes extends Component {
   render() {
     return (
       <div className="Routes">
-        <Route path="/colors"
+        <Route exact path="/colors"
           render={() => <Home colors={this.props.colors} />} />
       </div>
     );
